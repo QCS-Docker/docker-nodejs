@@ -1,6 +1,6 @@
 FROM java:8-jdk
 RUN apt-get update && apt-get install -y wget git curl zip make gcc g++ source
-
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ENV NVM_DIR /usr/local/nvm  
 ENV NODE_VERSION 0.10.38  
 ENV WORK_DIR /workspace
